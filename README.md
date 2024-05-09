@@ -49,10 +49,14 @@ The app was deployed on Heroku, and can be seen [here]().
 
 ---
 ### **Wireframes**
-
 ##### Home Page
+![Landing Page](/images/Barbershop-Landing.jpg)
 
+##### Booking Page
+![Booking Page](/images/Barbershop-Booking.jpg)
 
+##### Barbers Index
+![Barbers Index](/images/Barbershop-Index.jpg)
 
 ---
 ### Trello Board
