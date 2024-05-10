@@ -4,5 +4,45 @@
 }
 
 header {
+
+}
+
+.nav-cont {
+  display: flex;  
+}
+
+.nav-link {
+  display: inline-block;
+}
+
+img {
+  width: 40px;
+}
+
+#nav-toggle {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+
+
+@media all and (max-width: 500px) {
+
+  .nav-cont {
+    flex-direction: column;
+    text-align: center;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 50px 0px;
+  }
   
+  #nav-toggle {
+    display: block;
+  }
 }
