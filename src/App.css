@@ -4,7 +4,17 @@
 }
 
 header {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
 
+#mern {
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-left: 30px;
+  margin-top: 0px;
+  margin-bottom: 0px; 
 }
 
 .nav-cont {
@@ -19,8 +29,12 @@ img {
   width: 40px;
 }
 
-#nav-toggle {
+
+.mobile-nav {
   display: none;
+}
+
+.burger-menu {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -28,9 +42,24 @@ img {
 
 
 
+
 @media all and (max-width: 500px) {
 
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
+
   .nav-cont {
+    flex-direction: column;
+    width: 95vw;
+    text-align: center;
+  }
+
+  /* .nav-cont {
     flex-direction: column;
     text-align: center;
     height: 0;
@@ -44,5 +73,5 @@ img {
   
   #nav-toggle {
     display: block;
-  }
+  } */
 }

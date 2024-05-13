@@ -4,8 +4,9 @@ import Nav from "./Nav"
 
 const Header = () => {
   return (
-    <div>
-        <Nav />
+    <div className="header">
+        <img src="../images/logo.png" alt="" />
+        <h1 id="mern">Mern's Barbershop</h1>
     </div>
   )
 }

@@ -73,7 +73,9 @@ I used a [Trello](https://trello.com/b/jiwbf0Ss/ga-capstone-barbershop) board du
 - [ ] Add a Client profile and history (see Compoent Hierarchy Diagram)
 
 ---
+### **Credits**
 
+[This](https://kenudeh.hashnode.dev/how-to-build-a-responsive-navigation-menu-with-react) tutorial by Ken Udeh was very helpful in creating the responsive mobile menu.
 
 
 ---

@@ -9,18 +9,8 @@ const Nav = () => {
 
   }
   
-  navToggle.addEventListener("click", onClick)
-
-
-
   return (
     <div>
-      <div id="nav-toggle"> 
-        <img src="/images/Hamburger_icon.png" alt="" />
-      
-      </div>
-
-
       <div className="nav-cont">
           <Link to="/"><div className="nav-link">Home</div></Link>
           <Link to="/"><div className="nav-link">Our Barbers</div></Link>
