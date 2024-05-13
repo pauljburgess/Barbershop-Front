@@ -5,6 +5,7 @@ import Home from './components/Home'
 import Header from './components/Header'
 import DesktopNav from './components/DesktopNav'
 import MobileNav from './components/MobileNav'
+import Barbers from './components/Barbers'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
       <main>
         <Routes>
           <Route path='/' element={ <Home />}/>
+          <Route path='/barbers' element={ <Barbers />} />
 
         </Routes>
 
