@@ -13,7 +13,7 @@ const Nav = ({onClick, user}) => {
           <Link to="/"><div className="nav-link" onClick={onClick}>Home</div></Link>
           <Link to="/barbers"><div className="nav-link" onClick={onClick}>Our Barbers</div></Link>
           <Link to="/barbers/add"><div className="nav-link" onClick={onClick}>Add Barber</div></Link>
-          <Link to="/"><div className="nav-link" onClick={onClick}>Services</div></Link>
+          <Link to="/services"><div className="nav-link" onClick={onClick}>Services</div></Link>
           <Link to="/"><div className="nav-link" onClick={onClick}>Book Appt</div></Link>
           <Link to="/signin"><div className="nav-link" onClick={onClick}>Logout</div></Link>
       </div>
