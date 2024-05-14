@@ -6,12 +6,25 @@ import Header from './components/Header'
 import DesktopNav from './components/DesktopNav'
 import MobileNav from './components/MobileNav'
 import Barbers from './components/Barbers'
+import Admin from './components/Admin'
+import { CheckSession } from './services/Auth'
 
 function App() {
 
   const [user, setUser] = useState(null)
 
+  const checkToken = async (token) => {
+    const user = await CheckSession(token)
+    setUser(user)
+  }
 
+  useEffect(() =>{
+    const token = localStorage.getItem('token')
+    if(token){
+        checkToken(token)
+      }
+  }, [])
+  
 
   return (
     <div>
@@ -23,7 +36,7 @@ function App() {
         <Routes>
           <Route path='/' element={ <Home />}/>
           <Route path='/barbers' element={ <Barbers />} />
-
+          <Route path='/signin' element={ <Admin setUser={setUser} />} />
         </Routes>
 
 

@@ -12,6 +12,7 @@ const Nav = ({onClick}) => {
           <Link to="/barbers"><div className="nav-link" onClick={onClick}>Our Barbers</div></Link>
           <Link to="/"><div className="nav-link" onClick={onClick}>Services</div></Link>
           <Link to="/"><div className="nav-link" onClick={onClick}>Book Appt</div></Link>
+          <Link to="/signin"><div className="nav-link" onClick={onClick}>Admin</div></Link>
       </div>
     </div>
   )
