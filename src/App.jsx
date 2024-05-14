@@ -29,8 +29,8 @@ function App() {
   return (
     <div>
       <Header />
-      <DesktopNav />
-      <MobileNav />
+      <DesktopNav user={user} />
+      <MobileNav user={user} />
     
       <main>
         <Routes>

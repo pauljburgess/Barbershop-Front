@@ -1,9 +1,9 @@
 import Nav from "./Nav"
 
-const DesktopNav = () => {
+const DesktopNav = ({user}) => {
   return (
     <div className="desktop-nav">
-        <Nav />
+        <Nav user={user}/>
     </div>
   )
 }
