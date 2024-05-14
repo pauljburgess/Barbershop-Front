@@ -9,6 +9,10 @@ import Barbers from './components/Barbers'
 
 function App() {
 
+  const [user, setUser] = useState(null)
+
+
+
   return (
     <div>
       <Header />
