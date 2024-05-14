@@ -1,5 +1,5 @@
 import { useState } from "react"
-import Admin from "../services/api"
+import API from "../services/api"
 import { useNavigate } from "react-router-dom"
 
 const AddBarber = () => {
@@ -17,7 +17,7 @@ const AddBarber = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await Admin.post('/barbers', newBarber)
+    await API.post('/barbers', newBarber)
     navigate('/barbers')
   }
 

@@ -18,7 +18,7 @@ const Barbers = () => {
     <div className='content'>
         <h1>Our Team</h1>
 				{barbers.map(barber => (
-					<div>
+					<div key={barber._id}>
 						<h3>{barber.name}</h3>
 						<p>{barber.bio}</p>
 					</div>

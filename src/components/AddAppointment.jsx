@@ -37,11 +37,14 @@ const AddAppointment = () => {
   return (
     <div>
        <form onSubmit={handleSubmit}>
-        <select>
+
+        <select name='barber' onChange={handleChange}>
+          <option value="" ></option>
           {barbers.map(barber =>
-            <option value={barber.id}>{barber.name}</option>
+            <option key={barber._id} value={barber._id}>{barber.name}</option>
           )}
         </select>
+
         <input 
           onChange={handleChange}
           type="date" 
