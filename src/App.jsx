@@ -11,6 +11,7 @@ import Admin from './components/Admin'
 import AddBarber from './components/AddBarber'
 import Services from './components/Services'
 import AddService from './components/AddService'
+import AddAppointment from './components/AddAppointment'
 
 function App() {
 
@@ -43,6 +44,7 @@ function App() {
           <Route path='/barbers/add' element={ <AddBarber />} />
           <Route path='/services' element={<Services />} />
           <Route path='/services/add' element={<AddService />} />
+          <Route path='/appointments/add' element={<AddAppointment />} />
         </Routes>
 
 

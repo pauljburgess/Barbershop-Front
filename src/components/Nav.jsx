@@ -15,6 +15,7 @@ const Nav = ({onClick, user}) => {
           <Link to="/barbers/add"><div className="nav-link" onClick={onClick}>Add Barber</div></Link>
           <Link to="/services"><div className="nav-link" onClick={onClick}>Services</div></Link>
           <Link to="/services/add"><div className="nav-link" onClick={onClick}>Add Service</div></Link>
+          <Link to="/appointments/add"><div className="nav-link" onClick={onClick}>Add Appt</div></Link>
           <Link to="/"><div className="nav-link" onClick={onClick}>Book Appt</div></Link>
           <Link to="/signin"><div className="nav-link" onClick={onClick}>Logout</div></Link>
       </div>
