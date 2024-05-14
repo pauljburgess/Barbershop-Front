@@ -8,6 +8,7 @@ import MobileNav from './components/MobileNav'
 import Barbers from './components/Barbers'
 import Admin from './components/Admin'
 import { CheckSession } from './services/Auth'
+import AddBarber from './components/AddBarber'
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
           <Route path='/' element={ <Home />}/>
           <Route path='/barbers' element={ <Barbers />} />
           <Route path='/signin' element={ <Admin setUser={setUser} />} />
+          <Route path='/barbers/add' element={ <AddBarber />} />
         </Routes>
 
 
