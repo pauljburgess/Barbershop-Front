@@ -1,0 +1,65 @@
+import { useState } from "react"
+import API from "../services/api"
+import { useNavigate } from "react-router-dom"
+import { options } from "../../../Barbershop-Back/routes/AuthRouter"
+
+const AddAppointment = () => {
+
+  const navigate = useNavigate()
+
+  const [newAppointment, setNewAppointment] = useState({
+    barber: '',
+    date: '',
+    time: '',
+  })
+
+  const handleChange = (e) => {
+    setNewAppointment({...newAppointment, [e.target.name]: e.target.value})
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    await API.post('/appointments', newAppointment)
+    navigate('/')
+  }
+
+  const [barbers, setBarbers] = useState([])
+
+	const fetchBarbers = async () => {
+		let response = await API.get("/barbers")
+		setBarbers(response.data)
+	}
+
+	useEffect(() => {
+		fetchBarbers()
+	}, [])
+
+  return (
+    <div>
+       <form onSubmit={handleSubmit}>
+        <select>
+          {barbers.map(barber =>
+            <option value={barber.id}>{barber.name}</option>
+          )}
+        </select>
+        <input 
+          onChange={handleChange}
+          type="date" 
+          name="date" 
+          value={newAppointment.date}
+        />
+        <input 
+          onChange={handleChange}
+          type="number" 
+          name="time" 
+          value={newAppointment.time}
+        />
+        <button type="submit">
+        Add
+      </button>
+      </form> 
+    </div>
+  )
+}
+
+export default AddAppointment
