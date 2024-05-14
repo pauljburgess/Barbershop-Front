@@ -1,8 +1,8 @@
-import Admin from './api'
+import API from './api'
 
 export const SignInAdmin = async (data) => {
     try{
-			let response = await Admin.post('/auth/login', data)
+			let response = await API.post('/auth/login', data)
 			localStorage.setItem('token', response.data.token)
 			return response.data.user
     } catch (error) {
@@ -12,7 +12,7 @@ export const SignInAdmin = async (data) => {
 
 export const RegisterAdmin = async (data) => {
 	try {
-		const response = await Admin.post('/auth/register', data)
+		const response = await API.post('/auth/register', data)
 		return response.data
 	} catch (error){
 		throw error
@@ -21,7 +21,7 @@ export const RegisterAdmin = async (data) => {
 
 export const CheckSession = async () => {
 	try {
-		const response = await Admin.get('/auth/session')
+		const response = await API.get('/auth/session')
 		return response.data
 	} catch (error) {
 		throw error

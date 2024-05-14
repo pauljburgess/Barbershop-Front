@@ -1,14 +1,16 @@
-import { useState, useEffect } from 'react'
 import './App.css'
+import { useState, useEffect } from 'react'
 import { Routes, Route, NavLink } from 'react-router-dom'
+import { CheckSession } from './services/Auth'
 import Home from './components/Home'
 import Header from './components/Header'
 import DesktopNav from './components/DesktopNav'
 import MobileNav from './components/MobileNav'
 import Barbers from './components/Barbers'
 import Admin from './components/Admin'
-import { CheckSession } from './services/Auth'
 import AddBarber from './components/AddBarber'
+import Services from './components/Services'
+import AddService from './components/AddService'
 
 function App() {
 
@@ -39,6 +41,8 @@ function App() {
           <Route path='/barbers' element={ <Barbers />} />
           <Route path='/signin' element={ <Admin setUser={setUser} />} />
           <Route path='/barbers/add' element={ <AddBarber />} />
+          <Route path='/services' element={<Services />} />
+          <Route path='/services/add' element={<AddService />} />
         </Routes>
 
 

@@ -1,15 +1,12 @@
-import axios from 'axios'
+import API from '../services/api'
 import {useState, useEffect} from 'react'
-
-
-
 
 const Barbers = () => {
 	
 	const [barbers, setBarbers] = useState([])
 
 	const fetchBarbers = async () => {
-		let response = await axios.get("https://mernsbbs-c43dae5036eb.herokuapp.com/barbers")
+		let response = await API.get("/barbers")
 		setBarbers(response.data)
 	}
 
