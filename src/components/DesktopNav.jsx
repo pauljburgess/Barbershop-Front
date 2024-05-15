@@ -1,9 +1,9 @@
 import Nav from "./Nav"
 
-const DesktopNav = ({user}) => {
+const DesktopNav = ({user, logOut}) => {
   return (
     <div className="desktop-nav">
-        <Nav user={user}/>
+        <Nav user={user} logOut={logOut}/>
     </div>
   )
 }

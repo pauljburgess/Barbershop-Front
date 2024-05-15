@@ -18,6 +18,11 @@ function App() {
 
   const [user, setUser] = useState(null)
 
+  const logOut = () => {
+    setUser(null)
+    localStorage.clear()
+  }
+
   const checkToken = async (token) => {
     const user = await CheckSession(token)
     setUser(user)
@@ -34,8 +39,8 @@ function App() {
   return (
     <div>
       <Header />
-      <DesktopNav user={user} />
-      <MobileNav user={user} />
+      <DesktopNav user={user} logOut={logOut}/>
+      <MobileNav user={user} logOut={logOut}/>
     
       <main>
         <Routes>

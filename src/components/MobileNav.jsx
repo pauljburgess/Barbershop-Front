@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import Nav from "./Nav"
 
-const MobileNav = ({user}) => {
+const MobileNav = ({user, logOut}) => {
 
   const [click, setClick] = useState(false)
 
@@ -14,7 +14,7 @@ const MobileNav = ({user}) => {
   return (
     <div className="mobile-nav">
 			{Hamburger}
-      {click && <Nav onClick={onClick} user={user}/>}
+      {click && <Nav onClick={onClick} user={user} logOut={logOut}/>}
     </div>
   )
 }
