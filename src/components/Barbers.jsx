@@ -18,7 +18,6 @@ const Barbers = ({user}) => {
 	}, [])
 
 	const onClick = async(id) => {
-		console.log(id)
 		await API.delete(`/barbers/${id}`)
 		fetchBarbers()
 		navigate('/barbers')
