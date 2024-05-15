@@ -12,6 +12,7 @@ import AddBarber from './components/AddBarber'
 import Services from './components/Services'
 import AddService from './components/AddService'
 import AddAppointment from './components/AddAppointment'
+import UpdateBarber from './components/UpdateBarber'
 
 function App() {
 
@@ -39,12 +40,13 @@ function App() {
       <main>
         <Routes>
           <Route path='/' element={ <Home />}/>
-          <Route path='/barbers' element={ <Barbers />} />
+          <Route path='/barbers' element={ <Barbers user={user}/>} />
           <Route path='/signin' element={ <Admin setUser={setUser} />} />
           <Route path='/barbers/add' element={ <AddBarber />} />
           <Route path='/services' element={<Services />} />
           <Route path='/services/add' element={<AddService />} />
           <Route path='/appointments/add' element={<AddAppointment />} />
+          <Route path='/barbers/update/:id' element={<UpdateBarber />} />
         </Routes>
 
 

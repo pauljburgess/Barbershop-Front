@@ -1,7 +1,10 @@
 import API from '../services/api'
 import {useState, useEffect} from 'react'
+import { useNavigate } from 'react-router-dom'
 
-const Barbers = () => {
+const Barbers = ({user}) => {
+
+	const navigate = useNavigate()
 	
 	const [barbers, setBarbers] = useState([])
 
@@ -14,6 +17,17 @@ const Barbers = () => {
 		fetchBarbers()
 	}, [])
 
+	const onClick = async(id) => {
+		console.log(id)
+		await API.delete(`/barbers/${id}`)
+		fetchBarbers()
+		navigate('/barbers')
+	}
+
+	const whenClicked = (id) => {
+		navigate(`/barbers/update/${id}`)
+	}
+
   return (
     <div className='content'>
         <h1>Our Team</h1>
@@ -21,6 +35,13 @@ const Barbers = () => {
 					<div key={barber._id}>
 						<h3>{barber.name}</h3>
 						<p>{barber.bio}</p>
+						{user ? 
+							<div>
+								<button onClick={() => whenClicked(barber._id)}>Update</button>
+								<button onClick={() => onClick(barber._id)}>Delete</button>
+							</div>
+							
+						: ''}
 					</div>
 				))}
     </div>
