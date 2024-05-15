@@ -18,12 +18,6 @@ const AddBooking = () => {
     setNewBooking({...newBooking, [e.target.name]: e.target.value})
   }
   
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    await API.post('/bookings', newBooking)
-    navigate('/')
-  }
-
   const [barbers, setBarbers] = useState([])
 
 	const fetchBarbers = async () => {
@@ -51,6 +45,13 @@ const AddBooking = () => {
     fetchAppointments()
 	}, [newBooking.barber])
 
+
+  const handleSubmit = async (e) => {
+    console.log(newBooking)
+    e.preventDefault()
+    await API.post('/bookings', newBooking)
+    navigate('/')
+  }
 
   return (
     <div className='content'>
