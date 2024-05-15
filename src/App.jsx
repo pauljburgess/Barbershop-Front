@@ -14,6 +14,7 @@ import AddService from './components/AddService'
 import AddAppointment from './components/AddAppointment'
 import UpdateBarber from './components/UpdateBarber'
 import AddBooking from './components/AddBooking'
+import Confirmation from './components/Confirmation'
 
 function App() {
 
@@ -54,6 +55,7 @@ function App() {
           <Route path='/appointments/add' element={<AddAppointment />} />
           <Route path='/barbers/update/:id' element={<UpdateBarber />} />
           <Route path='/bookings/add' element={<AddBooking />} />
+          <Route path='/bookings/:id' element={<Confirmation />}/>
         </Routes>
 
 

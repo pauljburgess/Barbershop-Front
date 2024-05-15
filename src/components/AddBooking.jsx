@@ -47,10 +47,10 @@ const AddBooking = () => {
 
 
   const handleSubmit = async (e) => {
-    console.log(newBooking)
     e.preventDefault()
-    await API.post('/bookings', newBooking)
-    navigate('/')
+    const response = await API.post('/bookings', newBooking)
+    console.log(response)
+    navigate(`/bookings/${response.data._id}`)
   }
 
   return (
