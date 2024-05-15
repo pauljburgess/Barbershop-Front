@@ -13,6 +13,7 @@ import Services from './components/Services'
 import AddService from './components/AddService'
 import AddAppointment from './components/AddAppointment'
 import UpdateBarber from './components/UpdateBarber'
+import AddBooking from './components/AddBooking'
 
 function App() {
 
@@ -52,6 +53,7 @@ function App() {
           <Route path='/services/add' element={<AddService />} />
           <Route path='/appointments/add' element={<AddAppointment />} />
           <Route path='/barbers/update/:id' element={<UpdateBarber />} />
+          <Route path='/bookings/add' element={<AddBooking />} />
         </Routes>
 
 
