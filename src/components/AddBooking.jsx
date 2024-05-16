@@ -36,20 +36,28 @@ const AddBooking = () => {
 
   const fetchAppointments = async () => {
     let response = await API.get('/appointments')
-    setAppointments(response.data)
+    let result = response.data.filter((appt) => {
+      console.log(appt.barber[0])
+    })
+    setAppointments(result)
   }
 
   useEffect(() => {
-		fetchBarbers(),
-    fetchServices(),
-    fetchAppointments()
-	}, [newBooking.barber])
+		fetchBarbers()
+    fetchServices()
+	}, [])
+  
+  useEffect(() => {
+    if(newBooking.barber){
+      fetchAppointments()
+      console.log(newBooking.barber)
+    }
+  }, [newBooking.barber])
 
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     const response = await API.post('/bookings', newBooking)
-    console.log(response)
     navigate(`/bookings/${response.data._id}`)
   }
 

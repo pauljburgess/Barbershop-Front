@@ -6,14 +6,12 @@ const Confirmation = () => {
 
   let { id } = useParams()
 
-  const [newConfirmation, setNewConfirmation] = useState({})
+  const [newConfirmation, setNewConfirmation] = useState(null)
 
   const fetchConfirmation = async () => {
     let response = await API.get(`/bookings/${id}`)
     setNewConfirmation(response.data)
-    fetchBarber()
-    fetchAppointment()
-    fetchService()
+    
   }
 
   useEffect(() => {
@@ -41,10 +39,19 @@ const Confirmation = () => {
     setService(response.data.name)
   }
 
+  useEffect(() => {
+    if (newConfirmation){
+      fetchBarber()
+      fetchAppointment()
+      fetchService()
+    }
+  }, [newConfirmation])
+
   return (
     <div className='content'>
       <h1>Thank you!</h1>
-      <p>This confirms that an appointment for a {service} has been booked for {newConfirmation.name} with {barber} on {appointment.date} at {appointment.time}.</p>
+      { !!newConfirmation && <p>This confirms that an appointment for a {service} has been booked for {newConfirmation.name} with {barber} on {appointment.date.slice(0,10)} at {appointment.time}.</p> }
+      
       <h3>We appreciate your business and recommend you take a screenshot of this confirmation.</h3>
     </div>
   )
