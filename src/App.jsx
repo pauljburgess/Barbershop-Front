@@ -39,15 +39,6 @@ function App() {
   }, [])
   
 
-  const [newConfirmation, setNewConfirmation] = useState({})
-
-  const fetchConfirmation = async (confId) => {
-    let response = await API.get(`/bookings/${confId}`)
-    setNewConfirmation(response.data)
-  }
-
-
-
   return (
     <div>
       <Header />
@@ -64,8 +55,8 @@ function App() {
           <Route path='/services/add' element={<AddService />} />
           <Route path='/appointments/add' element={<AddAppointment />} />
           <Route path='/barbers/update/:id' element={<UpdateBarber />} />
-          <Route path='/bookings/add' element={<AddBooking fetchConfirmation={fetchConfirmation}/>} />
-          <Route path='/bookings/:id' element={<Confirmation confirmation={newConfirmation}/>}/>
+          <Route path='/bookings/add' element={<AddBooking />} />
+          <Route path='/bookings/:id' element={<Confirmation />}/>
         </Routes>
 
 

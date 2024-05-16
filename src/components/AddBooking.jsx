@@ -37,7 +37,7 @@ const AddBooking = () => {
   const fetchAppointments = async () => {
     let response = await API.get('/appointments')
     let result = response.data.filter((appt) => {
-      console.log(appt.barber[0])
+      return appt.barber = newBooking.barber
     })
     setAppointments(result)
   }
@@ -50,7 +50,6 @@ const AddBooking = () => {
   useEffect(() => {
     if(newBooking.barber){
       fetchAppointments()
-      console.log(newBooking.barber)
     }
   }, [newBooking.barber])
 
