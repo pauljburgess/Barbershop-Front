@@ -54,7 +54,7 @@ const AddBooking = () => {
   const fetchAppointments = async () => {
     let response = await API.get('/appointments')
     let result = response.data.filter((appt) => {
-      return appt.barber[0] === newBooking.barber
+      return appt.barber[0] === newBooking.barber && appt.booked === false
     })
     setAppointments(result)
   }
