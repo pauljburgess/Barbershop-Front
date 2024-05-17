@@ -11,6 +11,7 @@ const AddAppointment = () => {
     barber: '',
     date: '',
     time: '',
+    booked: 'false',
   })
 
   const handleChange = (e) => {

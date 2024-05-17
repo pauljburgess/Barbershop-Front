@@ -50,7 +50,7 @@ const Confirmation = () => {
   return (
     <div className='content'>
       <h1>Thank you!</h1>
-      { !!newConfirmation && <p>This confirms that an appointment for a {service} has been booked for {newConfirmation.name} with {barber} on {appointment.date.slice(0,10)} at {appointment.time}.</p> }
+      { !!newConfirmation && <p>This confirms that an appointment for a {service} has been booked for {newConfirmation.name} with {barber} on {appointment.date} at {appointment.time}.</p> }
       
       <h3>We appreciate your business and recommend you take a screenshot of this confirmation.</h3>
     </div>

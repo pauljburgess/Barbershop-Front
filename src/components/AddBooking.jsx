@@ -14,8 +14,25 @@ const AddBooking = () => {
     service: '',
   })
 
+  const [bookedAppt, setBookedAppt] = useState({
+    barber: '',
+    date: '',
+    time: '',
+    booked: 'true',
+  })
+  
   const handleChange = (e) => {
     setNewBooking({...newBooking, [e.target.name]: e.target.value})
+    handleBooking()
+  }
+
+  const handleBooking = () => {
+    setBookedAppt({
+      barber: newBooking.barber,
+      date: 'Hey',
+      time: 'Hello',
+      booked: 'true',
+    })
   }
   
   const [barbers, setBarbers] = useState([])
@@ -97,7 +114,7 @@ const AddBooking = () => {
         <select name='appointment' onChange={handleChange}>
           <option value="" ></option>
           {appointments.map(appointment =>
-            <option key={appointment._id} value={appointment._id}>{appointment.date}</option>
+            <option key={appointment._id} value={appointment._id}>{appointment.date.slice(0,10)} - {appointment.time}</option>
           )}
         </select>
 
