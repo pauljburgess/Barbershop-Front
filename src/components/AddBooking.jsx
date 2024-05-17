@@ -23,18 +23,18 @@ const AddBooking = () => {
   
   const handleChange = (e) => {
     setNewBooking({...newBooking, [e.target.name]: e.target.value})
-    handleBooking()
   }
 
-  const handleBooking = () => {
+  const handleBooking = async () => {
+    let response = await API.get(`/appointments/${newBooking.appointment}`)
     setBookedAppt({
-      barber: newBooking.barber,
-      date: 'Hey',
-      time: 'Hello',
+      barber: response.data.barber[0],
+      date: response.data.date,
+      time: response.data.time,
       booked: 'true',
     })
   }
-  
+
   const [barbers, setBarbers] = useState([])
 
 	const fetchBarbers = async () => {
@@ -56,7 +56,6 @@ const AddBooking = () => {
     let result = response.data.filter((appt) => {
       return appt.barber[0] === newBooking.barber
     })
-    console.log(result)
     setAppointments(result)
   }
 
@@ -71,10 +70,18 @@ const AddBooking = () => {
     }
   }, [newBooking.barber])
 
+  useEffect(() => {
+    if(newBooking.appointment){
+      handleBooking()
+    }
+  }, [newBooking.appointment])
+
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     const response = await API.post('/bookings', newBooking)
+    const putResponse = await API.put(`/appointments/${newBooking.appointment}`, bookedAppt)
+    console.log(putResponse)
     navigate(`/bookings/${response.data._id}`)
   }
 
