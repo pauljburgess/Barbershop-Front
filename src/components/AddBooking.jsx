@@ -80,8 +80,7 @@ const AddBooking = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     const response = await API.post('/bookings', newBooking)
-    const putResponse = await API.put(`/appointments/${newBooking.appointment}`, bookedAppt)
-    console.log(putResponse)
+    await API.put(`/appointments/${newBooking.appointment}`, bookedAppt)
     navigate(`/bookings/${response.data._id}`)
   }
 
