@@ -27,6 +27,11 @@ const Barbers = ({user}) => {
 		navigate(`/barbers/update/${id}`)
 	}
 
+	const clicked = (id) => {
+		navigate(`/barbers/schedule/${id}`)
+	}
+
+
   return (
     <div className='content'>
         <h1>Our Team</h1>
@@ -37,6 +42,7 @@ const Barbers = ({user}) => {
 						{user ? 
 							<div>
 								<button onClick={() => whenClicked(barber._id)}>Update</button>
+								<button onClick={() => clicked(barber._id)}>Schedule</button>
 								<button onClick={() => onClick(barber._id)}>Delete</button>
 							</div>
 							
