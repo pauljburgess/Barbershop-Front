@@ -1,20 +1,47 @@
+.roboto-flex-300 {
+  font-family: "Roboto Flex", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "wdth" 100,
+    "GRAD" 0,
+    "XOPQ" 96,
+    "XTRA" 468,
+    "YOPQ" 79,
+    "YTAS" 750,
+    "YTDE" -203,
+    "YTFI" 738,
+    "YTLC" 514,
+    "YTUC" 712;
+}
+
+
+body {
+  background-color: rgba(92, 98, 107, 0.7);
+  margin: 0;
+}
+
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
+ 
 }
 
-header {
-  display: block;
-  width: 100%;
-  text-align: center;
-}
 
 #mern {
+  font-family: "Amita", serif;
   display: inline-block;
-  font-size: 1.5rem;
-  margin-left: 30px;
-  margin-top: 0px;
-  margin-bottom: 0px; 
+  font-size: 2rem;
+  margin: 15px 0px 0px 17px;
+}
+
+.header {
+  height: 75px;
+  text-align: left;
+ 
 }
 
 .nav-cont {
@@ -29,9 +56,14 @@ header {
 }
 
 img {
-  width: 40px;
+  width: 45px;
 }
 
+#greeting {
+  width: 200px;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
 
 .mobile-nav {
   display: none;
@@ -41,10 +73,11 @@ img {
 .burger-menu {
   position: absolute;
   top: 20px;
-  right: 20px;
+  right: 17px;
 }
 
 .content {
+  margin: 0 auto;
   text-align: center;
 }
 
