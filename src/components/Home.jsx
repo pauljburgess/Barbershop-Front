@@ -8,7 +8,7 @@ const Home = () => {
         <p id="greeting" >Browse a list of our barbers and services above, or go straight to booking your appointment if you know who and what you'd like. We look foward to seeing you!</p>
 
 
-        <Link to="/bookings/add"><button id="book-here" className="roboto-flex-300">Book now!</button></Link>
+        <Link to="/bookings/add"><button className="roboto-flex-300, book">Book now!</button></Link>
     </div>
   )
 }

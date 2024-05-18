@@ -86,10 +86,10 @@ const AddBooking = () => {
 
   return (
     <div className='content'>
-      <h1>Book your Appointment</h1>
+      <h1 className="roboto-flex-300">Book your Appointment</h1>
 
       <form onSubmit={handleSubmit}>
-
+        <label for="name">This appointment is for:</label>
         <input className="input-box"
           onChange={handleChange}
           type="text"
@@ -98,7 +98,8 @@ const AddBooking = () => {
         />
 
         <br />
-
+        <label for="phone">Your phone # <br /> (in case we have to cancel)</label>
+      
         <input 
           onChange={handleChange}
           type="text"
@@ -107,7 +108,8 @@ const AddBooking = () => {
         />
 
         <br />
-
+        <label for="barber">Pick your barber:</label>
+        <br />
         <select name='barber' onChange={handleChange}>
           <option value="" ></option>
           {barbers.map(barber =>
@@ -116,7 +118,8 @@ const AddBooking = () => {
         </select>
 
         <br />
-
+        <label for="appointment">Select an appointment:</label>
+        <br />
         <select name='appointment' onChange={handleChange}>
           <option value="" ></option>
           {appointments.map(appointment =>
@@ -125,7 +128,8 @@ const AddBooking = () => {
         </select>
 
         <br />
-
+        <label for="service">Choose your service:</label>
+        <br />
         <select name='service' onChange={handleChange}>
           <option value="" ></option>
           {services.map(service =>
@@ -135,7 +139,7 @@ const AddBooking = () => {
         
         <br />
 
-        <button type="submit">Book</button>
+        <button type="submit" className="book">Book</button>
 
       </form>
 
