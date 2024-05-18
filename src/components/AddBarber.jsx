@@ -22,21 +22,28 @@ const AddBarber = () => {
   }
 
   return (
-    <div>
+    <div className="content">
+      <h1 className="roboto-flex-300">New Barber</h1>
        <form onSubmit={handleSubmit}>
+        <label htmlFor="name">Name:</label>
+        <br />
         <input 
           onChange={handleChange}
           type="text" 
           name="name" 
           value={newBarber.name}
         />
+        <br />
+        <label htmlFor="bio">Short Bio</label>
+        <br />
         <input 
           onChange={handleChange}
-          type="text" 
+          type="textarea" 
           name="bio" 
           value={newBarber.bio}
         />
-        <button type="submit">
+        <br />
+        <button type="submit" className="book">
         Submit
       </button>
       </form> 
