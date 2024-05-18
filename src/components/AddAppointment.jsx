@@ -21,7 +21,13 @@ const AddAppointment = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     await API.post('/appointments', newAppointment)
-    navigate('/')
+    setNewAppointment({
+      barber: '',
+      date: '',
+      time: '',
+      booked: 'false',
+    })
+    navigate('/appointments/add')
   }
 
   const [barbers, setBarbers] = useState([])
@@ -36,9 +42,12 @@ const AddAppointment = () => {
 	}, [])
 
   return (
-    <div>
+    <div className="content">
+      <h1 className="roboto-flex-300">Add appointment</h1>
        <form onSubmit={handleSubmit}>
 
+        <label htmlFor="barber">Barber:</label>
+        <br />
         <select name='barber' onChange={handleChange}>
           <option value="" ></option>
           {barbers.map(barber =>
@@ -46,21 +55,33 @@ const AddAppointment = () => {
           )}
         </select>
 
+          <br />
+
+        <label htmlFor="date">Date:</label>
+        <br />
         <input 
           onChange={handleChange}
           type="date" 
           name="date" 
           value={newAppointment.date}
         />
+
+        <br />
+
+        <label htmlFor="date">Time (military):</label>
+        <br />   
         <input 
           onChange={handleChange}
           type="number" 
           name="time" 
           value={newAppointment.time}
         />
-        <button type="submit">
-        Add
+        <br />
+        <button type="submit" className="book">
+        Add appointment
       </button>
+      <br />
+      
       </form> 
     </div>
   )

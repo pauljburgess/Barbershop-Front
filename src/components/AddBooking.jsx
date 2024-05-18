@@ -108,7 +108,7 @@ const AddBooking = () => {
         />
 
         <br />
-        <label for="barber">Pick your barber:</label>
+        <label htmlFor="barber">Pick your barber:</label>
         <br />
         <select name='barber' onChange={handleChange}>
           <option value="" ></option>
@@ -118,7 +118,7 @@ const AddBooking = () => {
         </select>
 
         <br />
-        <label for="appointment">Select an appointment:</label>
+        <label htmlFor="appointment">Select an appointment:</label>
         <br />
         <select name='appointment' onChange={handleChange}>
           <option value="" ></option>
@@ -128,7 +128,7 @@ const AddBooking = () => {
         </select>
 
         <br />
-        <label for="service">Choose your service:</label>
+        <label htmlFor="service">Choose your service:</label>
         <br />
         <select name='service' onChange={handleChange}>
           <option value="" ></option>
