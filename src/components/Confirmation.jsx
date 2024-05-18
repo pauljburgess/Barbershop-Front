@@ -49,10 +49,10 @@ const Confirmation = () => {
 
   return (
     <div className='content'>
-      <h1>Thank you!</h1>
-      { !!newConfirmation && <p>This confirms that an appointment for a {service} has been booked for {newConfirmation.name} with {barber} on {appointment.date} at {appointment.time}.</p> }
+      <h1 className='roboto-flex-300'>Thank you!</h1>
+      { !!newConfirmation && <p className="paragraph">This confirms that an appointment for a <strong>{service}</strong> has been booked for <strong>{newConfirmation.name}</strong> with <strong>{barber}</strong> on <strong>{String(appointment.date).slice(0,10)}</strong> at <strong>{appointment.time}</strong>.</p> }
       
-      <h3>We appreciate your business and recommend you take a screenshot of this confirmation.</h3>
+      <h3>We recommend you take a <span className='underline'>screenshot</span> of this confirmation. See you soon!</h3>
     </div>
   )
 }
