@@ -94,8 +94,15 @@ img {
   padding: 15px;
   font-size: 1.5rem;
   border-radius: 10px;
-  background-color: brown;
+  background-color: rgb(193, 34, 34);
   color: rgb(0, 0, 0);
+}
+
+form input[type=text], select {
+  width: 60vw;
+  height: 30px;
+  margin-bottom: 20px;
+  border-radius: 4px;
 }
 
 @media all and (max-width: 500px) {

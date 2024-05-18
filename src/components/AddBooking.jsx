@@ -90,7 +90,7 @@ const AddBooking = () => {
 
       <form onSubmit={handleSubmit}>
 
-        <input 
+        <input className="input-box"
           onChange={handleChange}
           type="text"
           name="name"
