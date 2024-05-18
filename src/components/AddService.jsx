@@ -22,7 +22,10 @@ const AddService = () => {
   }
 
   return (
-    <div>
+    <div className="content">
+      <h1>New Service:</h1>
+      <label htmlFor="name">Name:</label>
+      <br />
        <form onSubmit={handleSubmit}>
         <input 
           onChange={handleChange}
@@ -30,13 +33,17 @@ const AddService = () => {
           name="name" 
           value={newService.name}
         />
+        <br />
+        <label htmlFor="price">Price (number only): </label>
+        <br />
         <input 
           onChange={handleChange}
           type="number" 
           name="price" 
           value={newService.price}
         />
-        <button type="submit">
+        <br />
+        <button type="submit" className="book">
         Submit
       </button>
       </form> 
