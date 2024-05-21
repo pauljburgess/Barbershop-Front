@@ -102,7 +102,7 @@ img {
   color: rgb(0, 0, 0);
 }
 
-form input[type=text], select, [type=number], [type=textarea], [type=date] {
+form input[type=text], select, [type=number], [type=textarea], [type=date], [type=email], [type=password] {
   width: 60vw;
   height: 30px;
   margin-top: 5px;

@@ -21,8 +21,11 @@ const Admin = (props) => {
   }
 
   return (
-    <div>
+    <div className="content">
+      <h1 className="roboto-flex-300">Admin Sign-In</h1>
       <form onSubmit={handleSubmit}>
+        <label htmlFor="email">Email Address</label>
+        <br />
         <input 
           onChange={handleChange}
           name="email"
@@ -31,6 +34,9 @@ const Admin = (props) => {
           value={formValues.email}
           required
         />
+        <br/>
+        <label htmlFor="password">Password</label>
+        <br />
         <input
           onChange={handleChange}
           name="password"
@@ -38,8 +44,8 @@ const Admin = (props) => {
           value={formValues.password}
           required
           />
-
-        <button disabled={!formValues.password || !formValues.email}>
+        <br />
+        <button className="book" disabled={!formValues.password || !formValues.email}>
           Sign In
         </button>
       </form>
