@@ -24,6 +24,7 @@ const AddBarber = () => {
   return (
     <div className="content">
       <h1 className="roboto-flex-300">New Barber</h1>
+      
        <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name:</label>
         <br />
