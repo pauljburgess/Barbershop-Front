@@ -90,6 +90,7 @@ const AddBooking = () => {
 
       <form onSubmit={handleSubmit}>
         <label for="name">This appointment is for:</label>
+        <br />
         <input className="input-box"
           onChange={handleChange}
           type="text"
@@ -99,7 +100,7 @@ const AddBooking = () => {
 
         <br />
         <label htmlFor="phone">Your phone # <br /> (in case we have to cancel)</label>
-      
+        <br />
         <input 
           onChange={handleChange}
           type="text"
