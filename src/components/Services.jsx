@@ -18,7 +18,7 @@ const Services = () => {
     <div className='content'>
       <h1 className='roboto-flex-300'>Our Services</h1>
       {services.map(service => (
-        <div key={service._id}>
+        <div key={service._id} className='card'>
           <h4>{service.name} - ${service.price}</h4>
         </div>
       ))}

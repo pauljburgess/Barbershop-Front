@@ -153,8 +153,6 @@ img {
   width: 150px;
 }
 
-
-
 form input[type=text], select, [type=number], [type=textarea], [type=date], [type=email], [type=password] {
   width: 60vw;
   height: 30px;
@@ -166,6 +164,12 @@ form input[type=text], select, [type=number], [type=textarea], [type=date], [typ
 
 .underline {
   text-decoration: underline;
+}
+
+.card {
+  border: 1px solid black;
+  max-width: 300px;
+  margin: 0 auto 10px auto;
 }
 
 @media all and (max-width: 500px) {
