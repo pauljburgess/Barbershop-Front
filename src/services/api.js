@@ -1,6 +1,6 @@
 import Axios from "axios";
 
-export const BASE_URL = 'http://localhost:4000'
+export const BASE_URL = 'https://mernsbbs-c43dae5036eb.herokuapp.com/'
 
 const API = Axios.create({ baseURL: BASE_URL})
 
