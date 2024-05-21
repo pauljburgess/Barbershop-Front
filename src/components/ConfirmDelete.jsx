@@ -34,8 +34,9 @@ const ConfirmDelete = () => {
   return (
     <div className='content'>
       <h1 className='roboto-flex-300'>Delete {barber.name} ?</h1>
-      <button onClick={() => onClick(barber._id)}>Yes</button>
-      <button onClick={onCancel}>No</button>
+      <button className='no' onClick={onCancel}>No</button>
+      <br />
+      <button className="yes" onClick={() => onClick(barber._id)}>Yes</button>
     </div>
   )
 }
