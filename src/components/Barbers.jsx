@@ -18,9 +18,7 @@ const Barbers = ({user}) => {
 	}, [])
 
 	const onClick = async(id) => {
-		await API.delete(`/barbers/${id}`)
-		fetchBarbers()
-		navigate('/barbers')
+		navigate(`/barbers/delete/${id}`)
 	}
 
 	const whenClicked = (id) => {

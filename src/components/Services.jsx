@@ -16,7 +16,7 @@ const Services = () => {
 
   return (
     <div className='content'>
-      <h2>Our Services</h2>
+      <h1 className='roboto-flex-300'>Our Services</h1>
       {services.map(service => (
         <div key={service._id}>
           <h4>{service.name} - ${service.price}</h4>
