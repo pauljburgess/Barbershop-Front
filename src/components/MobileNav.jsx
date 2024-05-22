@@ -5,7 +5,7 @@ const MobileNav = ({user, logOut}) => {
 
   const [click, setClick] = useState(false)
 
-  const Hamburger = <img className="burger-menu" src='../images/Hamburger_icon.png' onClick={() => setClick(!click)}/>
+  const Hamburger = <img className="burger-menu" src='../public/images/hamburger_icon.png' onClick={() => setClick(!click)}/>
 
 	const onClick = () => {
 		setClick(!click)
