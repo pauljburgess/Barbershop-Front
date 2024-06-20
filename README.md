@@ -76,7 +76,7 @@ Exploring this app is simple. The app was deployed on Heroku, and can be seen [h
 ##### Barbers Index (admin)
 ![Barbers Index](public/images/finished_admin_barbers.png)
 
----
+---1cc
 ### Project planning
 
 I used a [Trello](https://trello.com/b/jiwbf0Ss/ga-capstone-barbershop) board during development of this app.
