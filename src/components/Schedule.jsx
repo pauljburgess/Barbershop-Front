@@ -39,7 +39,7 @@ const Schedule = () => {
       <h2>Booked Appointments:</h2>
       {bookedAppointments.map(appt => (
         <div key={appt._id}>
-          <p>{appt.date.slice(0,10)} - {appt.time}</p>
+          <p><a href="">{appt.date.slice(0,10)} - {appt.time}</a></p>
         </div>
       ))}
 
