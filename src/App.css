@@ -165,6 +165,7 @@ form input[type=text], select, [type=number], [type=textarea], [type=date], [typ
   border: 1px solid black;
   max-width: 300px;
   margin: 0 auto 10px auto;
+  border-radius: 15px;
 }
 
 @media all and (max-width: 500px) {
