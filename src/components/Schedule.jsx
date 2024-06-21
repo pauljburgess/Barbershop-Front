@@ -1,7 +1,11 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import API from '../services/api'
+import { useNavigate } from 'react-router-dom'
+
 const Schedule = () => {
+
+  const navigate = useNavigate()
 
   let { id } = useParams()
 
@@ -24,7 +28,6 @@ const Schedule = () => {
     let bookedResults = response.data.filter((appt) => {
       return appt.barber[0] === id && appt.booked === true
     })
-    console.log(bookedResults)
     setBookedAppointments(bookedResults)
   }
 
@@ -33,13 +36,18 @@ const Schedule = () => {
     fetchAppointments()
   }, [])
 
+  const onClick = async () => {
+    navigate('/barbers')
+  }
+
+
   return (
     <div className='content'>
       <h1>{barber.name}'s Schedule</h1>
       <h2>Booked Appointments:</h2>
       {bookedAppointments.map(appt => (
         <div key={appt._id}>
-          <p><a href="">{appt.date.slice(0,10)} - {appt.time}</a></p>
+          <p onClick={onClick} >{appt.date.slice(0,10)} - {appt.time}</p>
         </div>
       ))}
 
