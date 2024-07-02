@@ -18,6 +18,8 @@ import AddBooking from './components/AddBooking'
 import Confirmation from './components/Confirmation'
 import Schedule from './components/Schedule'
 import ConfirmDelete from './components/ConfirmDelete'
+import Appointment from './components/Appointment'
+import MyComponent from './components/MyComp'
 
 function App() {
 
@@ -60,7 +62,8 @@ function App() {
           <Route path='/bookings/add' element={<AddBooking />} />
           <Route path='/bookings/:id' element={<Confirmation />}/>
           <Route path='/barbers/schedule/:id' element={<Schedule />}/>
-          <Route path='barbers/delete/:id' element={<ConfirmDelete />} />
+          <Route path='/barbers/delete/:id' element={<ConfirmDelete />} />
+          <Route path='/barbers/appointments'element={ <MyComponent />} /> 
         </Routes>
 
 

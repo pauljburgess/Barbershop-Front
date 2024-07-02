@@ -36,10 +36,9 @@ const Schedule = () => {
     fetchAppointments()
   }, [])
 
-  const onClick = async () => {
-    navigate('/barbers')
+  const onClick = (id) => {
+    navigate(`/barbers/appointments/${id}`)
   }
-
 
   return (
     <div className='content'>
