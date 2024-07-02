@@ -46,7 +46,7 @@ const Schedule = () => {
       <h2>Booked Appointments:</h2>
       {bookedAppointments.map(appt => (
         <div key={appt._id}>
-          <p onClick={onClick} >{appt.date.slice(0,10)} - {appt.time}</p>
+          <p onClick={() => onClick(appt._id)} >{appt.date.slice(0,10)} - {appt.time}</p>
         </div>
       ))}
 
