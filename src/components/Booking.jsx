@@ -10,6 +10,7 @@ const Booking = () => {
 
   const fetchBooking = async () => {
     let response = await API.get(`/bookings/${id}`)
+    console.log(response)
     setBooking(response.data)
   }
 
@@ -19,7 +20,7 @@ const Booking = () => {
 
   return (
     <div>
-      <h1>Appointment</h1>
+      <h1>Booking for </h1>
 
     </div>
   )
