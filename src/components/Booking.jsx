@@ -9,9 +9,12 @@ const Booking = () => {
   const [booking, setBooking] = useState({})
 
   const fetchBooking = async () => {
-    let response = await API.get(`/bookings/${id}`)
-    console.log(response.data)
-    setBooking(response.data)
+    let response = await API.get(`/bookings`)
+    console.log(response)
+    let result = response.data.filter((booking) => {
+      return booking.appointment[0] == id
+    })
+    setBooking(result)
   }
 
   useEffect(() => {
