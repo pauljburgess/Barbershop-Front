@@ -10,11 +10,11 @@ const Booking = () => {
 
   const fetchBooking = async () => {
     let response = await API.get(`/bookings`)
-    console.log(response)
     let result = response.data.filter((booking) => {
       return booking.appointment[0] == id
     })
-    setBooking(result)
+    console.log(result[0])
+    setBooking(result[0])
   }
 
   useEffect(() => {
@@ -23,8 +23,8 @@ const Booking = () => {
 
   return (
     <div>
-      <h1>Booking for </h1>
-
+      <h1>Booking for {booking.name}</h1>
+      
     </div>
   )
 }

@@ -37,6 +37,7 @@ const Schedule = () => {
   }, [])
 
   const onClick = (id) => {
+    console.log(id)
     navigate(`/barbers/appointments/${id}`)
   }
 
