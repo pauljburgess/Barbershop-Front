@@ -101,7 +101,7 @@ const AddBooking = () => {
         <br />
         <label htmlFor="phone">Your phone # <br /> (in case we have to cancel)</label>
         <br />
-        <input 
+        <input className="input-box"
           onChange={handleChange}
           type="text"
           name="phone"
